@@ -1,2 +1,7 @@
 The first chapter containing basis of Git VCS
 1.Use 'master' as name for initial branch. names used in place of 'master' are trunk, development,main
+ # Working directory -->  Staging Area --> Git Repository
+2. To move file from Working Directory to Staging Directory use command "git add filename". Use command "git status" to check whether file transferred to Staging Area.
+3. Further git commit -m 'Chapter1'  where '-m'  is message flag else git commit is also sufficient command. git commit to move file from Staging Area to Git Repository
+  Cmd 'git log' shows commit history
+4. To configure username & email commands => git config --global user.name "Aneesh P"  & git config --global user.email "aneeshp@cybage.com"
