@@ -1,0 +1,2 @@
+The first chapter containing basis of Git VCS
+1.Use 'master' as name for initial branch. names used in place of 'master' are trunk, development,main
