@@ -1,11 +1,29 @@
 The first chapter containing basis of Git VCS                  
 1.Use 'master' as name for initial branch. Names used in place of 'master' are trunk, development,main
  # Working directory (Untracked Area)  -->   Staging Area --> Git Repository
-2. To move file from Working Directory to Staging Area use command "git add filename". Use command "git status" to check whether file transferred to Staging Area.
+2. To move file from Working Directory to Staging Area use command "git add filename" / git add . (to add all files into staging); Use command "git status" to check whether file transferred to Staging Area.
 3. Further git commit -m 'Chapter1'  where '-m'  is message flag else git commit is also sufficient command. git commit to move file from Staging Area to Git Repository
  ** Cmd 'git log' shows commit history ; git log --oneline   { shows short one line logs rather than detail including date, author,hash code]
+ IMP:- If made changes to earlier commited file, again  same steps=> git add filename  ; git commit -m 'message'. OR git commit -am 'Message'   [Combined both stage & commit in one command]
+ 
 4. To configure username & email commands => git config --global user.name "Aneesh P"  & git config --global user.email "aneeshp@cybage.com"
-5. git checkout file_name => to rollback to last commited version of file. Ex- If I wrote data in file and commited it after that if i made changes and save in text editor then the staging area version of file will get modified. In such case if I want previous version of file use checkout commandd to return back to latest commited version
+5. git checkout file_name => to rollback to last commited version of file. Ex- If I wrote data in file and commited it after that if i made changes and save in text editor then the Working directory area version of file will get modified. In such case if I want previous version of file use checkout commandd to return back to latest commited version
 6. Use git restore --staged file_name  => To unstage file
-7.{Remote Repository]
-git remote add origin url_of_remote_repository.
+
+7.{Remote Repository] (23/4)
+git remote add origin url_of_remote_repository. (origin is name of remote repository)   
+git push -u <remote_name> <branch_name>  {-u flag helps to merge local repository with remote repository}
+git branch -m master main  (to change master naming to main)
+git branch {Command to check branch name}
+
+8.(.gitignore is a hidden file)  (24/4)
+- Files included in .gitignore file are not moved to staging on execution of 'git add .' command
+- git rm --cached -r .(To remove file from staging back to working directory)
+ Explaination:- rm is to remove files, cached used to remove files only from staging not from working directory, -r to recursively among nested files/folders, . to specify location as current directory
+ -We need to have some code to be commited to create branch. Else it will be a empty repository
+ -git remote -v  {To check remote repository linked with local one}
+
+*.txt => means files with .txt extension will get ignore
+
+
+
