@@ -1,3 +1,5 @@
 Chapter2 
 Modified
 on staging changes
+------------------
+Changes made to understand flow from local branch to remote.
