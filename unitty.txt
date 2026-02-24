@@ -5,3 +5,6 @@ git merge feature/unitty
 
 git checkout unitty
 git merge master
+--------------------------
+
+Changes only made in feature
